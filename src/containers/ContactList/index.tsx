@@ -12,14 +12,11 @@ const ContactList = () => {
   const filterContacts = () => {
     let filteredContacts = itens
     if (term != undefined) {
-      console.log('b')
-
       filteredContacts = filteredContacts.filter(
         (item) => item.name.toLowerCase().search(term.toLowerCase()) >= 0
       )
 
       if (group && group !== 'all') {
-        console.log('a')
         filteredContacts = filteredContacts.filter(
           (item) => item.group === group
         )

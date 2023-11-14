@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { MainContainer, SaveButton, TextInput } from '../../styles'
 import { Form, Options, Option } from './styles'
 import * as enums from '../../utils/enums/Group'
-import Contact from '../../models/Contact'
 import { add } from '../../store/reducers/contacts'
 
 const FormContainer = () => {
@@ -15,8 +14,14 @@ const FormContainer = () => {
 
   const registerContact = (e: FormEvent) => {
     e.preventDefault()
-    const contactToAdd = new Contact(name, phone, email, group, 9)
-    dispatch(add(contactToAdd))
+    dispatch(
+      add({
+        name,
+        phone,
+        email,
+        group
+      })
+    )
     navigate('/')
   }
 
