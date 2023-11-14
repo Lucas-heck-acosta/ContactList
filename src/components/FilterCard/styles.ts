@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import variables from '../../styles/variables'
 
-import { Props } from '.'
+type Props = {
+  active: boolean
+}
 
-type OmitProps = Omit<Props, 'counter' | 'text'>
-export const Card = styled.div<OmitProps>`
+export const Card = styled.div<Props>`
   margin-top: 8px;
   display: flex;
   justify-content: space-between;

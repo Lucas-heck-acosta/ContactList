@@ -42,7 +42,7 @@ export const MainContainer = styled.main`
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: #666;
   }
 `
 
