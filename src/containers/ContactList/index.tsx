@@ -3,6 +3,7 @@ import Contact from '../../components/Contact'
 import { MainContainer } from '../../styles'
 import { Grid } from './styles'
 import { RootReducer } from '../../store'
+import AddButton from '../../components/AddButton'
 
 const ContactList = () => {
   const { itens } = useSelector((state: RootReducer) => state.contacts)
@@ -42,6 +43,7 @@ const ContactList = () => {
             group={c.group}
           />
         ))}
+        <AddButton />
       </Grid>
     </MainContainer>
   )

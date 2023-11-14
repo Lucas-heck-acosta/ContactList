@@ -4,6 +4,7 @@ import ContactIconImage from '../../assets/images/contact-icon.png'
 import ContactClass from '../../models/Contact'
 import { useState } from 'react'
 import * as S from './styles'
+import { SaveButton } from '../../styles'
 
 type Props = ContactClass
 
@@ -44,14 +45,14 @@ const Contact = ({
       {editing ? (
         <S.EditingButtons>
           <S.CancelButton onClick={cancelEdit}>Cancel</S.CancelButton>
-          <S.SaveButton
+          <SaveButton
             onClick={() => {
               dispatch(edit({ name, phone, email, group, id }))
               setEditing(false)
             }}
           >
             Save
-          </S.SaveButton>
+          </SaveButton>
         </S.EditingButtons>
       ) : (
         <S.editButton onClick={() => setEditing(true)}>Edit</S.editButton>

@@ -96,7 +96,3 @@ export const CancelButton = styled(editButton)`
     background-color: #ff4040;
   }
 `
-export const SaveButton = styled(editButton)`
-  flex: 1;
-  width: 100%;
-`

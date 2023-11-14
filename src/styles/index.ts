@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import { editButton } from '../components/Contact/styles'
 import variables from './variables'
 
 const GlobalStyle = createGlobalStyle`
@@ -53,4 +54,9 @@ export const TextInput = styled.input`
   padding: 8px;
   background-color: ${variables.darkBlue};
   font-weight: bold;
+`
+
+export const SaveButton = styled(editButton)`
+  flex: 1;
+  width: 100%;
 `
