@@ -20,6 +20,11 @@ export const Card = styled.div<Props>`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    max-width: 50%;
+  }
 `
 
 export const Counter = styled.span`
@@ -27,6 +32,10 @@ export const Counter = styled.span`
   font-size: 24px;
   color: inherit;
   display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const Label = styled.span`

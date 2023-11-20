@@ -54,6 +54,10 @@ export const TextInput = styled.input`
   padding: 8px;
   background-color: ${variables.darkBlue};
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const SaveButton = styled(editButton)`
